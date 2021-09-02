@@ -1,0 +1,46 @@
+<p>{{company}}</p>
+
+<form id="formT">
+    <div *ngIf="company == 'DISH'">
+        <div>
+            <label for="first">First: </label>
+            <input type="text" value="" name="first" id="first">
+        </div>
+        <div>
+            <label for="second">Second: </label>
+            <input type="text" value="" name="second" id="second">
+        </div>
+        <div>
+            <label for="third">Third: </label>
+            <input type="text" value="" name="third" id="third">
+        </div>
+        <div *ngIf="company == 'DISH'">
+            <label for="dish-input">Dish: </label>
+            <input id="dish-input" type="text" value="dish" name="dish">
+        </div>
+        <div>
+            <label for="Last">Last: </label>
+            <input type="text" value="" name="Last" id="Last">
+        </div>
+    </div>
+
+    <div *ngIf="company != 'DISH'">
+        <div>
+            <label for="difFirst">difFirst: </label>
+            <input type="text" value="" name="difFirst" id="difFirst">
+        </div>
+        <div>
+            <label for="difsecond">difSecond: </label>
+            <input type="text" value="" name="difsecond" id="difsecond">
+        </div>
+        <div>
+            <label for="third">Third: </label>
+            <input type="text" value="" name="third" id="third">
+        </div>
+        <div>
+            <label for="Last">Last: </label>
+            <input type="text" value="" name="Last" id="Last">
+        </div>
+    </div>
+    <button (click)=submitForm($event) type="submit">Submit</button>
+</form>
