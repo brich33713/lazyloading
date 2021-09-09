@@ -1,0 +1,62 @@
+<div class="row">
+
+
+    <div>
+        <div class="form-horizontal col-md-5 green-border">
+            <h3>Search Client</h3>
+            <hr />
+            <div class="form-group">
+            <label for="FirstName" class="text-box single-line col-md-3">First Name</label>
+                <div class="col-md-9">
+                    <input type="text" name="FirstName" class="form-control">
+                    <span class="text-danger field-validation-valid">{{firstNameMsg}}</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="LastName" class="text-box single-line col-md-3">Last Name</label>
+                <div class="col-md-9">
+                    <input type="text" name="LastName" class="form-control">
+                    <span class="text-danger field-validation-valid">{{lastNameMsg}}</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="AccountNumber" class="text-box single-line col-md-3">Account Number</label>
+                <div class="col-md-9">
+                    <input type="text" name="AccountNumber" class="form-control">
+                    <span class="text-danger field-validation-valid">{{accountNumberMsg}}</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="PhoneNumber" class="text-box single-line col-md-3">Phone Number</label>
+                <div class="col-md-9">
+                    <input type="text" name="PhoneNumber" class="form-control">
+                    <span class="text-danger field-validation-valid">{{phoneNumberMsg}}</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Zip" class="text-box single-line col-md-3">Zip</label>
+                <div class="col-md-9">
+                    <input type="text" name="Zip" class="form-control">
+                    <span class="text-danger field-validation-valid">{{zipMsg}}</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-3 col-md-9">
+                    <input type="submit" value="Search" class="btn btn-info" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 " style="float:right">
+        <div>
+            <h3 class="text-danger">{{searchResultsMsg}}</h3>
+        </div>
+
+        <div #searchResults></div>
+        
+    </div>
+
+</div>

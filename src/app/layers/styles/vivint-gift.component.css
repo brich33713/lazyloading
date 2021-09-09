@@ -1,0 +1,13 @@
+/* margin-top: 50px; margin-left: 80px; */
+
+h4.vivint-gift {
+    margin-top: 50px;
+    /* margin-left: 80px; */
+    font-size: 30px;
+}
+
+span.vivint-gift.input-group-addon {
+    background-color: #ff8200; 
+    cursor: pointer; 
+    font-weight: bold;
+}

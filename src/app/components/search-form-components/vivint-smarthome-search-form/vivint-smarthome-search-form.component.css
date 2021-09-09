@@ -1,0 +1,310 @@
+body {
+    padding-top: 50px;
+    /*padding-bottom: 20px;*/
+    min-height:100%;
+    position: relative;
+    margin-bottom: 0;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+#footer {
+    position: absolute;
+    height: 40px;
+    margin-top: -40px;
+    bottom: 0;
+    left: 0;
+    width: 100% !important;
+}
+
+.iconHover:hover {
+    color: #ff9c35 !important;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    height: 100%;
+    padding-bottom: 40px; /*for footer*/
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+.form-control {
+    display: inline;
+    
+}
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+    border-radius: 5px;
+
+}
+.terms-view {
+
+    max-height: 300px;
+    max-width: 400px;
+    overflow-x: auto;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: #ff8200;
+    margin: 0 auto;
+
+}
+input[type="file"] {
+    display: inline;
+}
+/*Upload Button*/
+/*div.fileinputs {
+    position: relative;
+    
+}
+
+div.fakefile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+}
+
+input.file {
+    position: relative;
+    text-align: right;
+    -moz-opacity:0 ;
+    filter:alpha(opacity: 0);
+    opacity: 0;
+    z-index: 2;
+}*/
+/*Orange Buttons*/
+.button {
+    /*background-color: #ff8200;*/
+    border: black;
+    border-style: solid;
+    border-radius: 5px;
+    color: black;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 350px;
+}
+.button:hover {
+    /*background-color: #ff9200*/
+}
+
+.center {
+    text-align: center;
+    font-weight: bold;
+  
+}
+
+div.vivint-smarthome.center.lookup-container {
+    padding-top: 20px;
+    margin: auto;
+    width: 50%;
+}
+.viv-container {
+    padding-top: 20px;
+    margin: auto;
+    width: 30%;
+}
+.viv-help-container {
+    padding-top: 25px;
+    color: black;
+    font-weight: bold;
+    width: 50%;
+    margin: auto;
+}
+#viv-link a:link { color: black; }
+#viv-link a:visited { color: black; }
+#viv-link a:hover { color: black; }
+#viv-link a:active { color: black; }
+
+/*Turns upload file and next buttons gray when clicked and disabled*/
+.buttonDisabled {
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 350px;
+}
+.buttonDisabled:hover {
+    background-color: lightgray;
+}
+
+
+/*Bootstrap Overrides*/
+
+.navbar-inverse {
+    background-color: white;
+    border-color: black;
+}
+.navbar-inverse .navbar-nav >li >a {
+    color: white;
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+    font-weight: bolder;
+}
+
+.editor label {
+    float: left;
+    width: 90px;   
+    text-align: right;
+    padding-right: 7px;
+    padding-top: 7px;
+}
+
+.editor input[type=text] {
+    width: 180px; 
+    margin: 0 0 0 10px; 
+}
+
+#editText {
+    padding: 50px;
+    float: left;
+    margin-left: -50px;
+}
+
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.orangeHover {
+    color: #ff8200;
+    font-weight: bold;
+}
+
+    .orangeHover:hover {
+        color: black;
+    }
+
+
+#videoH4 {
+    float: right;
+    padding: 10px 20px 25px 0px;
+}
+
+#videoLink:hover {
+    color: #ff8200 !important;
+    text-decoration: none;
+}
+
+@media only screen and (max-width:1100px) {
+     #videoLink {
+         font-size: 13px;
+     }
+ }
+
+@media only screen and (max-width:830px) {
+     #videoLink {
+         font-size: 13px;
+         padding: 5px;
+     }
+     #vivintLogo {
+         text-align: left !important;
+     }
+
+     .navbar-nav {
+         display: inline !important;
+         text-align: left !important;
+     }
+
+     #vivintImage {
+         margin-left: -5px !important;
+     }
+ }
+
+@media only screen and (min-width: 740px) and (max-width:1001px) {
+     #editText {
+         float: none !important;
+         margin-left: 0
+     }
+
+     #buyoutVideo {
+         width: 700px;
+     }
+ }
+
+@media screen and (min-width: 540px) and (max-width:740px) {
+     #buyoutVideo {
+         width: 550px;
+     }
+ }
+
+
+
+@media only screen and (min-width: 0) and (max-width:540px) {
+     #videoLink {
+         font-size: 11px;
+     }
+
+     #videoIcon {
+         font-size: 11px;
+     }
+
+     #vivintImage {
+         width: 170px;
+     }
+
+     #buyoutVideo {
+         width: 370px;
+     }
+ }
+
+#instructions {
+    display: inline-block;
+    text-align: left;
+}
+
+#instructions li {
+    padding: 5px;
+}
+
+
+@media only screen and (max-width:600px) {
+
+    .viv-container { margin: 0;
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    .viv-help-container {
+        padding-top: 25px;
+        color: black;
+        font-weight: bold;
+        /*margin: auto;*/
+        width: 100%;
+    }
+    .lookup-container {
+        padding-top: 20px;
+        margin: auto;
+        width: 100%;
+    }
+}

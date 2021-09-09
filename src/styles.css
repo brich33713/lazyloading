@@ -1,2 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../src/app/layers/styles/dish.component.css"
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '../src/app/layers/styles/dish.component.css';
+@import '../src/app/layers/styles/vivint.component.css';
+@import '../src/app/layers/styles/vivint-gift.component.css';
+@import '../src/app/layers/styles/efg-partnersweb.component.css';

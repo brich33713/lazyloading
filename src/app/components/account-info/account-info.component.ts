@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/layers/services/user.service';
 
 @Component({
   selector: 'app-account-info',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account-info.component.css']
 })
 export class AccountInfoComponent implements OnInit {
+  user = this._service.getUserInfo("token");
+  source = this.user.company == "dish" ? "assets/images/dish-account-info.PNG" : ""
 
-  constructor() { }
+  constructor(private _service: UserService) { }
 
   ngOnInit(): void {
   }

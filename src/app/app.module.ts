@@ -8,13 +8,15 @@ import { AccountSearchModule } from './views/account-search/account-search.modul
 
 import { routingComponents } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,7 @@ import { FormsModule } from '@angular/forms';
     AccountSearchModule,
     FormsModule
   ],
-  providers: [UserService],
-  bootstrap: [AppComponent]
+  providers: [UserService]
+  ,bootstrap: [AppComponent]
 })
 export class AppModule { }

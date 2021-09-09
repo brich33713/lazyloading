@@ -10,8 +10,8 @@ export class UserService {
   getUserInfo(token){
     return {
       name: "User Name",
-      role: "admin",
-      company: "DIISH"
+      role: "user",
+      company: "vivint-smarthome"
     }
   }
 

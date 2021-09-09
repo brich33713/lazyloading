@@ -1,0 +1,65 @@
+<div class="{{user.company}} lookup-container center" style="padding-top: 25px">
+    <h3 class="center" style="padding-top: 50px;">Begin Buy Out Process</h3>
+
+    <div style="text-align: center">
+        <p class="center">Welcome to the Vivint SmartHome Buy Out Homepage.</p>
+        <p class="center">Please follow the instructions below within 60 days of your installation date.</p>
+        <div id="instructions">
+            <ol>
+                <li>Have your Vivint account information available.</li>
+                <li>Have a copy of your original agreement that has your term length, monthly rate, and start date or a statement that has a cancellation amount?</li>
+                <li>Enter your information below and click next.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="form-group" style="padding-top: 25px; padding-bottom: 20px;">
+        <div class="col-md-8 col-md-offset-2">
+            <label for="LastName" class="control-label text-right">Enter Your Last Name:</label>
+            <input type="text" name="LastName" class="form-control" required id="LastName">
+            <div class="text-danger">{{lastNameMsg}}</div>
+        </div>
+    </div>
+
+    <div class="form-group" style="padding-top: 25px;padding-bottom: 25px;">
+        <div class="col-md-8 col-md-offset-2">
+            <label for="AccountNumber" class="control-label text-right">Vivint Account Number:</label>
+            <input type="text" name="AccountNumber" class="form-control" required id="AccountNumber">
+            <div class="text-danger">{{accountNumberMsg}}</div>
+        </div>
+    </div>
+
+    <div class="form-group" style="padding-top: 25px">
+        <input type="submit" value="Next" class="button" />
+    </div>
+</div>
+
+<h3 style="padding: 20px 0 10px; text-align: center; font-weight: bold">How Your Buy Out Works</h3>
+<div class="center">
+<video poster="~/Content/videoImage.png" id="buyoutVideo" width="900" controls="controls" autoplay="autoplay" loop onclick="this.play();" style="border: 2px solid black;">
+    <source src="~/Content/GiftCardBuyoutVideo.mp4" type="video/mp4" />
+</video>
+</div>
+
+<div class="lookup-container center" style="padding: 20px;">
+<button class="btn btn-info" id="show">Help</button>
+<div id="help" style="display: none;">
+    <h4 style="margin: 15px; color: black;">Contact Support</h4>
+    <span>
+        <strong>
+            Phone: <a href="tel:8885214919">888.521.4919</a>
+            Support: <a href="mailto:help@vivintbuyout.com">Help@VivintBuyOut.com</a>
+            Video: Video PlaceHolder
+        </strong>
+    </span>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+    $("#show").click(function () {
+        $("#help").toggle();
+    });
+});
+</script>

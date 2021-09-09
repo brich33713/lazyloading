@@ -2,17 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AccountSearchRoutingModule } from './account-search-routing.module';
-import { AccountSearchComponent } from './account-search.component';
-import { AccountInfoComponent } from 'src/app/components/account-info/account-info.component';
-import { SearchFormComponent } from 'src/app/components/search-form/search-form.component';
 import { HttpClientModule } from '@angular/common/http';
+
+import { searchFormComponents } from 'src/app/layers/repositories/SearchComponent.repository';
+
 
 
 @NgModule({
   declarations: [
-    AccountSearchComponent,
-    AccountInfoComponent,
-    SearchFormComponent
+    searchFormComponents  
   ],
   imports: [
     CommonModule,
@@ -20,8 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     AccountSearchRoutingModule
   ],
   exports: [
-    AccountInfoComponent,
-    SearchFormComponent
+    searchFormComponents
   ]
 })
 export class AccountSearchModule { }
