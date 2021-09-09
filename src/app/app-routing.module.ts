@@ -4,8 +4,10 @@ import { DishSearchFormComponent } from './components/search-form-components/dis
 import { LoginComponent } from './components/login/login.component';
 import { VivintSearchFormComponent } from './components/search-form-components/vivint-search-form/vivint-search-form.component';
 import { CheckLoggedInGuard } from './guards/check-logged-in.guard';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
+  {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   { path: 'searchAccount',
   loadChildren: () => import('./views/account-search/account-search.module').then(m => m.AccountSearchModule) },

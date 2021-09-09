@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenericSearchFormComponent implements OnInit {
 
-  submitForm(event){
-
+  firstNameMsg;
+  lastNameMsg;
+  phoneNumberMsg;
+  accountNumberMsg;
+  
+  submitForm(){
+    console.log("test")
   }
 
   constructor() { }

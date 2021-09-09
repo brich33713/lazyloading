@@ -1,25 +1,45 @@
-<form id="formT">
+<div class="row">
     <div>
-        <div>
-            <label for="first">First: </label>
-            <input type="text" value="" name="first" id="first">
-        </div>
-        <div>
-            <label for="second">Second: </label>
-            <input type="text" value="" name="second" id="second">
-        </div>
-        <div>
-            <label for="third">Third: </label>
-            <input type="text" value="" name="third" id="third">
-        </div>
-        <div>
-            <label for="dish-input">Dish: </label>
-            <input id="dish-input" type="text" value="dish" name="dish">
-        </div>
-        <div>
-            <label for="Last">Last: </label>
-            <input type="text" value="" name="Last" id="Last">
+        <div class="form-horizontal col-md-5 green-border">
+            <h3>Account Lookup</h3>
+            <hr />
+            <div class="form-group">
+            <label for="FirstName" class="text-box single-line col-md-3">First Name: </label>
+                <div class="col-md-9">
+                    <input type="text" name="FirstName" class="form-control">
+                    <span class="text-danger field-validation-valid">{{firstNameMsg}}</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="LastName" class="text-box single-line col-md-3">Last Name: </label>
+                <div class="col-md-9">
+                    <input type="text" name="LastName" class="form-control">
+                    <span class="text-danger field-validation-valid">{{lastNameMsg}}</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="AccountNumber" class="text-box single-line col-md-3">Account Number: </label>
+                <div class="col-md-9">
+                    <input type="text" name="AccountNumber" class="form-control">
+                    <span class="text-danger field-validation-valid">{{accountNumberMsg}}</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="PhoneNumber" class="text-box single-line col-md-3">Phone Number: </label>
+                <div class="col-md-9">
+                    <input type="text" name="PhoneNumber" class="form-control">
+                    <span class="text-danger field-validation-valid">{{phoneNumberMsg}}</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-3 col-md-9">
+                    <input type="submit" value="Search" class="btn btn-info" (click)=submitForm() />
+                </div>
+            </div>
         </div>
     </div>
-    <button (click)=submitForm($event) type="submit">Submit</button>
-</form>
+    <div #searchResults></div>
+</div>

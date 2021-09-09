@@ -11,6 +11,7 @@ export class VivintSmarthomeSearchFormComponent implements OnInit {
   lastNameMsg;
   accountNumberMsg;
 
+  
   constructor(private _service: UserService) { }
 
   ngOnInit(): void {

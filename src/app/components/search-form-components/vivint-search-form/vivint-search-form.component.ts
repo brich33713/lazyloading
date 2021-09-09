@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { UserService } from 'src/app/layers/services/user.service';
 
 @Component({
@@ -7,6 +7,9 @@ import { UserService } from 'src/app/layers/services/user.service';
   styleUrls: []
 })
 export class VivintSearchFormComponent implements OnInit {
+  @ViewChild('infoDisplay', {read: ViewContainerRef}) infoDisplay: ViewContainerRef;
+  
+  factory;
   message;
   user = this._service.getUserInfo("token");
 

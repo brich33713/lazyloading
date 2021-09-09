@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRef, ViewEncapsulation } from '@angular/core';
-import { ComponentFeaturesRepository } from 'src/app/layers/repositories/ComponentFeaturesRepository';
+import { ComponentService } from 'src/app/layers/services/component.service';
 import { UserService } from 'src/app/layers/services/user.service';
 import { NavbarComponent } from 'src/app/navbar/navbar.component';
 
@@ -48,26 +48,21 @@ export class AccountSearchComponent implements OnInit {
 
   
 
-  constructor(private repo: ComponentFeaturesRepository, private componentFactoryResolver: ComponentFactoryResolver, private cd: ChangeDetectorRef
+  constructor(private componentService: ComponentService, private componentFactoryResolver: ComponentFactoryResolver, private cd: ChangeDetectorRef
     ,private userService: UserService) { }
 
   ngOnInit(): void {
-    this.componentFeatures = this.repo.getComponentFeaturesById(this.componentId)
-    console.log(this.repo.getSearchForm())
-
-    
+    this.componentFeatures = this.componentService.getComponentFeaturesById(this.componentId)    
   }
 
   ngAfterViewInit(){
-    if(this.user.role == "user"){
-      this.component = this.componentFeatures[0]
-      
-      this.factory = this.componentFactoryResolver.resolveComponentFactory(this.component.name);
-      const ref = this.infoDisplay.createComponent(this.factory);
+    this.component = this.componentService.getInfoBox()
+    if(this.component != undefined){
+    this.factory = this.componentFactoryResolver.resolveComponentFactory(this.component.name);
+    this.infoDisplay.createComponent(this.factory);
     }
 
-
-    this.component = this.repo.getSearchForm()
+    this.component = this.componentService.getSearchForm()
     this.factory = this.componentFactoryResolver.resolveComponentFactory(this.component.name);
     this.searchForm.createComponent(this.factory);
 

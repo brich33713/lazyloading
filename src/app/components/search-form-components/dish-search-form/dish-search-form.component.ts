@@ -9,6 +9,10 @@ export class DishSearchFormComponent implements OnInit {
   message;
   company = "dish";
   
+  testFunc(){
+    console.log(document.getElementById("test"))
+  }
+
   constructor() { }
 
   ngOnInit(): void {

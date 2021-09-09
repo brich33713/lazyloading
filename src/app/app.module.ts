@@ -9,6 +9,8 @@ import { AccountSearchModule } from './views/account-search/account-search.modul
 import { routingComponents } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
+import { VivintSmarthomeInfoBoxComponent } from './components/info-box-components/vivint-smarthome-info-box/vivint-smarthome-info-box.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -16,7 +18,9 @@ import { NavbarComponent } from './navbar/navbar.component';
   declarations: [
     AppComponent,
     routingComponents,
-    NavbarComponent
+    NavbarComponent,
+    VivintSmarthomeInfoBoxComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
