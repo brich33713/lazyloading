@@ -11,6 +11,9 @@ export class VivintSmarthomeSearchFormComponent implements OnInit {
   lastNameMsg;
   accountNumberMsg;
 
+  helpButton(){
+    console.log(document.getElementById("AccountNumber"))
+  }
   
   constructor(private _service: UserService) { }
 

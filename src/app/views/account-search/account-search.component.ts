@@ -53,6 +53,7 @@ export class AccountSearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.componentFeatures = this.componentService.getComponentFeaturesById(this.componentId)    
+    
   }
 
   ngAfterViewInit(){

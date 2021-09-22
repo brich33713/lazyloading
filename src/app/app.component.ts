@@ -6,14 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: []
 })
 export class AppComponent {
-  
 
+  constructor(){
+
+  }
   
 
   title = 'LazyLoading';
 
   
   ngOnInit(){
-    
   }
+
 }

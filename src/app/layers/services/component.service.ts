@@ -7,6 +7,8 @@ import { VivintSearchFormComponent } from 'src/app/components/search-form-compon
 import { UserService } from './user.service';
 import { InfoBoxes } from '../repositories/InfoBox.repository';
 import { searchForms } from '../repositories/SearchComponent.repository';
+import { homePages } from '../repositories/HomePage.repository';
+import { Navbars } from '../repositories/NavBar.repository';
 
 
 @Injectable({
@@ -26,6 +28,22 @@ export class ComponentService {
         return arr;
     }
 
+    getHomePageLayout(){
+        let token = localStorage.getItem("token");
+        let user = this._service.getUserInfo(token);
+        let returnedLayout = homePages.find(p => p.role.includes(user.role) && p.client.includes(user.company))
+        returnedLayout = returnedLayout != undefined ? returnedLayout : homePages.find(p => p.role.includes(user.role) && p.client.length == 0)
+        return returnedLayout;
+    }
+
+    getNavBar(){
+        let token = localStorage.getItem("token");
+        let user = this._service.getUserInfo(token);
+        let returnedNavBar = Navbars.find(navbar => navbar.role.includes(user.role) && navbar.client.includes(user.company))
+        returnedNavBar = returnedNavBar != undefined ? returnedNavBar : Navbars.find(navbar => navbar.role.includes(user.role) && navbar.client.length == 0)
+        return returnedNavBar;
+    }
+
     getSearchForm(){
         let token = localStorage.getItem("token");
         let user = this._service.getUserInfo(token);
@@ -41,4 +59,6 @@ export class ComponentService {
         let returnedVal = InfoBoxes.find(box => box.role.includes(user.role) && box.client.includes(user.company))
         return returnedVal;
     }
+
+
 }

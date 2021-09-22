@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class DishSearchFormComponent implements OnInit {
   message;
   company = "dish";
-  
+  showCustomer = false;
+
   testFunc(){
-    console.log(document.getElementById("test"))
+    this.showCustomer = !this.showCustomer;
   }
 
   constructor() { }

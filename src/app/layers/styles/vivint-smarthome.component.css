@@ -1,0 +1,300 @@
+/* body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    min-height:100%;
+    position: relative;
+    margin-bottom: 0;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+#footer {
+    position: absolute;
+    height: 40px;
+    margin-top: -40px;
+    bottom: 0;
+    left: 0;
+    width: 100% !important;
+} */
+
+.vivint-smarthome.iconHover:hover {
+    color: #ff9c35 !important;
+}
+
+/* Set padding to keep content from hitting the edges */
+.vivint-smarthome.body-content {
+    height: 100%;
+    padding-bottom: 40px; /*for footer*/
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.vivint-smarthome.dl-horizontal dt {
+    white-space: normal;
+}
+.vivint-smarthome.form-control {
+    display: inline;
+    
+}
+/* Set width on the form input elements since they're 100% wide by default */
+.vivint-smarthome > input {
+    max-width: 280px;
+    border-radius: 5px;
+
+}
+.vivint-smarthome > select {
+    max-width: 280px;
+    border-radius: 5px;
+
+}
+.vivint-smarthome > textarea {
+    max-width: 280px;
+    border-radius: 5px;
+
+}
+.vivint-smarthome.terms-view {
+
+    max-height: 300px;
+    max-width: 400px;
+    overflow-x: auto;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: #ff8200;
+    margin: 0 auto;
+
+}
+.vivint-smarthome > input[type="file"] {
+    display: inline;
+}
+
+.vivint-smarthome.button {
+    background-color: inherit;
+    border: black;
+    border-style: solid;
+    border-radius: 5px;
+    color: black;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 350px;
+}
+.vivint-smarthome.button:hover {
+    /*background-color: #ff9200*/
+}
+
+.vivint-smarthome.vivint-smarthome.center {
+    text-align: center;
+    font-weight: bold;
+  
+}
+
+.vivint-smarthome.lookup-container {
+    padding-top: 20px;
+    margin: auto;
+    width: 50%;
+}
+.vivint-smarthome .viv-container {
+    padding-top: 20px;
+    margin: auto;
+    width: 30%;
+}
+.vivint-smarthome.viv-help-container {
+    padding-top: 25px;
+    color: black;
+    font-weight: bold;
+    width: 50%;
+    margin: auto;
+}
+.vivint-smarthome #viv-link a:link { color: black; }
+.vivint-smarthome #viv-link a:visited { color: black; }
+.vivint-smarthome #viv-link a:hover { color: black; }
+.vivint-smarthome #viv-link a:active { color: black; }
+
+/*Turns upload file and next buttons gray when clicked and disabled*/
+.vivint-smarthome.buttonDisabled {
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 350px;
+}
+.vivint-smarthome.buttonDisabled:hover {
+    background-color: lightgray;
+}
+
+
+/*Bootstrap Overrides*/
+
+.vivint-smarthome.navbar-inverse {
+    background-color: white;
+    border-color: black;
+}
+.vivint-smarthome.navbar-inverse .navbar-nav >li >a {
+    color: white;
+}
+.vivint-smarthome.navbar-inverse .navbar-brand {
+    color: white;
+    font-weight: bolder;
+}
+
+.vivint-smarthome.editor label {
+    float: left;
+    width: 90px;   
+    text-align: right;
+    padding-right: 7px;
+    padding-top: 7px;
+}
+
+.vivint-smarthome.editor input[type=text] {
+    width: 180px; 
+    margin: 0 0 0 10px; 
+}
+
+.vivint-smarthome #editText {
+    padding: 50px;
+    float: left;
+    margin-left: -50px;
+}
+
+.vivint-smarthome.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.vivint-smarthome.orangeHover {
+    color: #ff8200;
+    font-weight: bold;
+}
+
+.vivint-smarthome.orangeHover:hover {
+        color: black;
+    }
+
+
+.vivint-smarthome #videoH4 {
+    float: right;
+    padding: 10px 20px 25px 0px;
+}
+
+.vivint-smarthome #videoLink:hover {
+    color: #ff8200 !important;
+    text-decoration: none;
+}
+
+@media only screen and (max-width:1100px) {
+     .vivint-smarthome #videoLink {
+         font-size: 13px;
+     }
+ }
+
+@media only screen and (max-width:830px) {
+     .vivint-smarthome #videoLink {
+         font-size: 13px;
+         padding: 5px;
+     }
+     .vivint-smarthome #vivintLogo {
+         text-align: left !important;
+     }
+
+     .vivint-smarthome.navbar-nav {
+         display: inline !important;
+         text-align: left !important;
+     }
+
+     .vivint-smarthome #vivintImage {
+         margin-left: -5px !important;
+     }
+ }
+
+ .vivint-smarthome #videoIcon {
+    font-size: 11px;
+}
+
+@media only screen and (min-width: 740px) and (max-width:1001px) {
+     .vivint-smarthome #editText {
+         float: none !important;
+         margin-left: 0
+     }
+
+     .vivint-smarthome #buyoutVideo {
+         width: 700px;
+     }
+ }
+
+@media screen and (min-width: 540px) and (max-width:740px) {
+    .vivint-smarthome #buyoutVideo {
+         width: 550px;
+     }
+ }
+
+
+
+@media only screen and (min-width: 0) and (max-width:540px) {
+     .vivint-smarthome #videoLink {
+         font-size: 11px;
+     }
+
+     .vivint-smarthome #videoIcon {
+         font-size: 11px;
+     }
+
+     .vivint-smarthome #vivintImage {
+         width: 170px;
+     }
+
+     .vivint-smarthome #buyoutVideo {
+         width: 370px;
+     }
+ }
+
+.vivint-smarthome #instructions {
+    display: inline-block;
+    text-align: left;
+}
+
+.vivint-smarthome #instructions li {
+    padding: 5px;
+}
+
+
+@media only screen and (max-width:600px) {
+
+    .vivint-smarthome.viv-container { margin: 0;
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    .vivint-smarthome.viv-help-container {
+        padding-top: 25px;
+        color: black;
+        font-weight: bold;
+        /*margin: auto;*/
+        width: 100%;
+    }
+    .vivint-smarthome.lookup-container {
+        padding-top: 20px;
+        margin: auto;
+        width: 100%;
+    }
+}

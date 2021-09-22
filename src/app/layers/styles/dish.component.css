@@ -58,7 +58,7 @@ input.form-control.col-md-8.dish {
 }
 /*Bootstrap Overrides*/
 
-.dish .navbar-inverse {
+.dish.navbar-inverse {
     background-color: white;
     border-color: royalblue;
 }
@@ -74,7 +74,7 @@ input.form-control.col-md-8.dish {
 /*.navbar-inverse .navbar-nav > li > a :hover {
     color: black !important
 }*/
-.navbar-inverse .navbar-brand {
+.dish .navbar-inverse .navbar-brand {
     color: black;
     font-weight: bolder;
 }

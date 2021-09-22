@@ -6,9 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vivint-smarthome-info-box.component.css']
 })
 export class VivintSmarthomeInfoBoxComponent implements OnInit {
-  helpButton(){
-    console.log(document.getElementById("AccountNumber"))
-  }
+  
   
   constructor() { }
 
