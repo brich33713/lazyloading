@@ -5,7 +5,6 @@ import { AccountSearchRoutingModule } from './account-search-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { searchFormComponents } from 'src/app/layers/repositories/SearchComponent.repository';
-import { NavbarComponent } from 'src/app/navbar/navbar.component';
 
 
 

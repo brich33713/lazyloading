@@ -18,7 +18,9 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem("token")) this.router.navigate([""])
     this.isIframe = window !== window.parent && !window.opener;
+    
   }
 
   attemptLogIn(){

@@ -7,16 +7,17 @@ import { CheckLoggedInGuard } from './guards/check-logged-in.guard';
 
 const routes: Routes = [
   {
-    path: '', 
+    path: '',
+    canActivate: [CheckLoggedInGuard], 
     loadChildren: () => import('./views/home-page/home-page.module')
       .then(m => m.HomePageModule)
   },
   {
-    path: 'login', 
-    // canActivate: [CheckLoggedInGuard],
-    component: LoginComponent},
+    path: 'login',
+    component: LoginComponent
+  },
   { 
-    path: 'searchAccount',
+    path: 'accountSearch',
     canActivate: [CheckLoggedInGuard],
     loadChildren: () => import('./views/account-search/account-search.module')
     .then(m => m.AccountSearchModule) 

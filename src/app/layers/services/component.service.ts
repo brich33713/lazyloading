@@ -16,17 +16,6 @@ import { Navbars } from '../repositories/NavBar.repository';
   })
 export class ComponentService {
     constructor(private http: HttpClient, private _service: UserService){}
-    
-    getComponentFeaturesById(id){
-        //let arr = this.http.get("").subscribe()
-
-        this.http;
-        let arr = [
-            {name: AccountInfoComponent,role: "user", type: "info-display"},
-            {name: VivintSearchFormComponent, role: "user", type: "search"}
-        ]
-        return arr;
-    }
 
     getHomePageLayout(){
         let token = localStorage.getItem("token");

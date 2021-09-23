@@ -1,6 +1,5 @@
 import { ChangeDetectorRef, Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRef, ViewEncapsulation } from "@angular/core";
 import { ComponentService } from "src/app/layers/services/component.service";
-import { UserService } from "src/app/layers/services/user.service";
 
 @Component({
     encapsulation: ViewEncapsulation.None,
@@ -11,26 +10,29 @@ import { UserService } from "src/app/layers/services/user.service";
 
 export class HomePageComponent implements OnInit {
     @ViewChild('displayContainer', {read: ViewContainerRef}) displayContainter: ViewContainerRef;
-    user = this.userService.getUserInfo(localStorage.getItem("token"));
+    @ViewChild('navbar', {read: ViewContainerRef}) navbar: ViewContainerRef;
     component;
     factory;
     
-    constructor(private userService: UserService, 
-        private componentService: ComponentService, 
+    constructor(private componentService: ComponentService, 
         private componentFactoryResolver: ComponentFactoryResolver,
         private cd: ChangeDetectorRef){
-
     }
     
     ngOnInit(): void {}
 
     ngAfterViewInit(){
+    
+    // adds component for main display
       this.component = this.componentService.getHomePageLayout() 
-      if(this.component != undefined){
-          this.factory = this.componentFactoryResolver.resolveComponentFactory(this.component.name)
-          this.displayContainter.createComponent(this.factory)
-      }
+      this.factory = this.componentFactoryResolver.resolveComponentFactory(this.component.name)
+      this.displayContainter.createComponent(this.factory)
 
+    // adds component for navbar
+      this.component = this.componentService.getNavBar()
+      this.factory = this.componentFactoryResolver.resolveComponentFactory(this.component.name)
+      this.navbar.createComponent(this.factory);
+      
       this.cd.detectChanges()
 
     }

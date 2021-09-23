@@ -18,11 +18,11 @@ export class UserService {
     return {
       name: "User Name",
       role: "user",
-      company: "dish"
+      company: "vivint-smarthome"
     }
   }
 
   getUserCompany(token){
-    return "DISH";
+    return token;
   }
 }
