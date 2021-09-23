@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRef, ViewEncapsulation } from "@angular/core";
 import { ComponentService } from "src/app/layers/services/component.service";
+import { UserService } from "src/app/layers/services/user.service";
 
 @Component({
     encapsulation: ViewEncapsulation.None,
@@ -11,10 +12,12 @@ import { ComponentService } from "src/app/layers/services/component.service";
 export class HomePageComponent implements OnInit {
     @ViewChild('displayContainer', {read: ViewContainerRef}) displayContainter: ViewContainerRef;
     @ViewChild('navbar', {read: ViewContainerRef}) navbar: ViewContainerRef;
+    user = this.userService.getUserInfo(localStorage.getItem("token"));
     component;
     factory;
     
-    constructor(private componentService: ComponentService, 
+    constructor(private userService: UserService, 
+        private componentService: ComponentService, 
         private componentFactoryResolver: ComponentFactoryResolver,
         private cd: ChangeDetectorRef){
     }
