@@ -26,9 +26,9 @@ export class NavbarComponent implements OnInit {
       if(localStorage.getItem("token") !== null){
         this.user = this.userService.getUserInfo(localStorage.getItem("token"));
       } 
-
+      console.log(this.user)
       if(this.user !== undefined){
-        this.component = this.componentService.getNavBar() 
+        this.component = this.componentService.getNavBar()
         if(this.component != undefined){
           this.factory = this.componentFactoryResolver.resolveComponentFactory(this.component.name)
           this.navbar.createComponent(this.factory)

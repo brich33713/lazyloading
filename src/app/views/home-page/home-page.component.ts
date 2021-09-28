@@ -22,7 +22,9 @@ export class HomePageComponent implements OnInit {
         private cd: ChangeDetectorRef){
     }
     
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        // if(this.user.company == 'dish') this.router.navigate(["accountSearch"])
+    }
 
     ngAfterViewInit(){
     

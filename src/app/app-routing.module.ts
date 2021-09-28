@@ -4,11 +4,12 @@ import { DishSearchFormComponent } from './components/search-form-components/dis
 import { LoginComponent } from './components/login/login.component';
 import { VivintSearchFormComponent } from './components/search-form-components/vivint-search-form/vivint-search-form.component';
 import { CheckLoggedInGuard } from './guards/check-logged-in.guard';
+import { CheckCompanyGuard } from './guards/check-company.guard';
 
 const routes: Routes = [
   {
     path: '',
-    canActivate: [CheckLoggedInGuard], 
+    canActivate: [CheckLoggedInGuard,CheckCompanyGuard], 
     loadChildren: () => import('./views/home-page/home-page.module')
       .then(m => m.HomePageModule)
   },

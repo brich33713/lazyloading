@@ -11,16 +11,10 @@ export class GenericHomePageComponent implements OnInit {
   
   user = this.service.getUserInfo("token");
 
-  test(router: Router, user: any){
-    if(user.company == "dish"){
-      router.navigate(["searchAccount"])
-    }
-  }
-
   constructor(private service: UserService, private router: Router) { }
 
   ngOnInit(): void {
-    this.test(this.router, this.user)
+    
   }
 
 }

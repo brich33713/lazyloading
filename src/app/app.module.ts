@@ -9,13 +9,15 @@ import { AccountSearchModule } from './views/account-search/account-search.modul
 import { routingComponents } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HomePageModule } from './views/home-page/home-page.module';
+import { VivintGiftNavbarComponent } from './components/navbar-components/vivint-gift-navbar/vivint-gift-navbar.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    VivintGiftNavbarComponent
   ],
   imports: [
     BrowserModule,
