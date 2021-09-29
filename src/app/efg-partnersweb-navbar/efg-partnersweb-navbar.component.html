@@ -1,0 +1,25 @@
+<div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #fff !important; border-bottom: 2px solid #025da4 !important;">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            <a class="navbar-brand" href="/FileProcessing">
+                <img src="~/Content/Images/NewEliteLogo.png" alt="Site Logo" />
+            </a>
+            
+           <!-- @* @Html.ActionLink("Elite Fulfillment Group", "Index", "FileProcessing", new { area = "" }, new { @class = "navbar-brand" })*@ -->
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="addAccount"> Add Account</a></li>
+                <!-- <li><a href="About"> {{user.name}}</a></li> -->
+                <li><a href="" (click)="logOut()"> Log Off</a></li>
+            </ul>
+            <!-- @Html.Partial("_LoginPartial") -->
+        </div>
+    </div>
+</div>

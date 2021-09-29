@@ -18,7 +18,7 @@ export class UserService {
     return {
       name: "User Name",
       role: "user",
-      company: "vivint-switch"
+      company: "efg-partnersweb"
     }
   }
 

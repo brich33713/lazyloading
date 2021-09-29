@@ -2,12 +2,14 @@ import { VivintSmarthomeNavbarComponent } from "src/app/components/navbar-compon
 import { GenericNavbarComponent } from "src/app/components/navbar-components/generic-navbar/generic-navbar.component";
 import { DishNavbarComponent } from "src/app/components/navbar-components/dish-navbar/dish-navbar.component";
 import { VivintGiftNavbarComponent } from "src/app/components/navbar-components/vivint-gift-navbar/vivint-gift-navbar.component";
+import { EfgPartnerswebNavbarComponent } from "src/app/efg-partnersweb-navbar/efg-partnersweb-navbar.component";
 
 export const Navbars = [
     {name: GenericNavbarComponent, role: ["user","admin"],client: []},
     {name: VivintSmarthomeNavbarComponent, role: ["user","admin"], client: ["vivint-smarthome"]},
     {name: DishNavbarComponent, role: ["user","admin"], client: ["dish"]},
-    {name: VivintGiftNavbarComponent, role: ["user","admin"], client: ["vivint-gift"]}
+    {name: VivintGiftNavbarComponent, role: ["user","admin"], client: ["vivint-gift"]},
+    {name: EfgPartnerswebNavbarComponent, role: ["user","admin"], client: ["efg-partnersweb"]}
 ];
 
 export const NavbarComponents = []

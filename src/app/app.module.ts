@@ -10,6 +10,7 @@ import { routingComponents } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HomePageModule } from './views/home-page/home-page.module';
 import { VivintGiftNavbarComponent } from './components/navbar-components/vivint-gift-navbar/vivint-gift-navbar.component';
+import { EfgPartnerswebNavbarComponent } from './efg-partnersweb-navbar/efg-partnersweb-navbar.component';
 
 
 
@@ -17,7 +18,8 @@ import { VivintGiftNavbarComponent } from './components/navbar-components/vivint
   declarations: [
     AppComponent,
     routingComponents,
-    VivintGiftNavbarComponent
+    VivintGiftNavbarComponent,
+    EfgPartnerswebNavbarComponent
   ],
   imports: [
     BrowserModule,
