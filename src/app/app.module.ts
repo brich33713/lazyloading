@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePageModule } from './views/home-page/home-page.module';
 import { VivintGiftNavbarComponent } from './components/navbar-components/vivint-gift-navbar/vivint-gift-navbar.component';
 import { EfgPartnerswebNavbarComponent } from './efg-partnersweb-navbar/efg-partnersweb-navbar.component';
+import { EfgPartnerswebFileprocessingComponent } from './efg-partnersweb-fileprocessing/efg-partnersweb-fileprocessing.component';
 
 
 
@@ -19,7 +20,8 @@ import { EfgPartnerswebNavbarComponent } from './efg-partnersweb-navbar/efg-part
     AppComponent,
     routingComponents,
     VivintGiftNavbarComponent,
-    EfgPartnerswebNavbarComponent
+    EfgPartnerswebNavbarComponent,
+    EfgPartnerswebFileprocessingComponent
   ],
   imports: [
     BrowserModule,

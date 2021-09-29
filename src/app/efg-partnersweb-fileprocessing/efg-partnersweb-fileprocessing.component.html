@@ -1,0 +1,216 @@
+<div class="container">
+    <!-- <form action="/FileProcessing/ImportFile" autocomplete="off" enctype="multipart/form-data" method="post">                <div class="panel panel-info">
+        <div class="panel-heading">
+            <h4 style="text-align:center;" class="h4">
+                File Upload
+            </h4>
+        </div>
+        <div class="panel-body">
+            
+
+            <div class="col-lg-6">
+                <input type="file" class="btn btn-block blue-file-upload" id="ctl00_ContentPlaceHolder2_FileUpload" name="ctl00$ContentPlaceHolder2$FileUpload">
+            </div>
+            
+            <div class="col-lg-4">
+                    <select class="form-control" id="cmbRedeemtype" name="cmbRedeemtype">
+                        
+                        <option value="0">Email-Mail</option>
+                        
+                    </select>
+            </div>
+                  
+            <div class="col-lg-2">
+                <input type="submit" style="margin-top:2px;border:solid;border-width:1px;" class="btn btn-info" id="btnImport" value="Import New File" name="btnImport">
+            </div>
+        </div>
+    </div>
+</form> -->
+    <!-- Begin first full width column -->
+    <div class="col-lg-12" style="margin-top: 40px;">
+        <form action="/FileProcessing/ImportFile" autocomplete="off" enctype="multipart/form-data" method="post">  
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 style="text-align:center;" class="h4">
+                        File Upload
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <div class="col-lg-6">
+                        <input type="file" class="btn btn-block blue-file-upload" id="ctl00_ContentPlaceHolder2_FileUpload" name="ctl00$ContentPlaceHolder2$FileUpload">
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <select name="cmbRedeemtype"class="form-control" *ngIf="programId != null; else elseBlock">
+                            <option>Help</option>
+                        </select>
+                        <ng-template #elseBlock>
+                        <select class="form-control" id="cmbRedeemtype" name="cmbRedeemtype">
+                            <option value="0">Email-Mail</option>
+                        </select>
+                        </ng-template>
+                    </div>
+                          
+                    <div class="col-lg-2">
+                        <input type="submit" style="margin-top:2px;border:solid;border-width:1px;" class="btn btn-info" id="btnImport" value="Import New File" name="btnImport">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- End first full width column -->
+    <button class="btn btn-info" type="button" id="Summary" (click)="route('accountSearch')">
+        Summary
+    </button>
+    <div class="col-lg-12" style="margin-top: 40px;">
+        <div class="panel panel-info">
+            <div class="panel-heading" style="height:60px;">
+
+                <h4 class="h4" style="float:left;">
+                    Current Pending Records Per Invoice
+                </h4>
+                <a href="../FileProcessing/FileHistory" class="btn btn-info" style="float:right;">File Record History</a>
+
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-12">
+                    <div class="table-responsive">
+                        <table class="table blue-table">
+                            <thead style="background-color:#025da4; color:white;">
+                                <tr>
+                                    <td>FileId</td>
+                                    <td>Invoice Total</td>
+                                    <td>CreatedDate</td>
+                                    <td>Company</td>
+                                    <td>Status</td>
+                                    <td>Invoice No</td>
+                                    <td>Actions</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let md of lstFileRecords">
+                                    <td>md.InvoiceNumber</td>
+                                    <td>md.InvoiceTotal</td>
+                                    <td>md.InvoiceDate</td>
+                                    <!-- <td>Enum.GetName(typeof(Client), md.ClientId)</td> -->
+                                    <td>Company Name Placeholder</td>
+                                    <td>md.Status</td>
+                                    <td>md.InvoiceNumber</td>
+                                    <td>
+                                        <button class="btn btn-info" type="button" id="Summary" href="www.google.com">
+                                            Summary
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- @{
+                                    if (ViewBag.CompanyInvoices != null)
+                                    {
+
+                                        List<Invoice> lstFileRecords = (List<Invoice>)ViewBag.CompanyInvoices;
+                                        if (lstFileRecords.Count > 0)
+                                        {
+                                            foreach (var md in lstFileRecords)
+                                            {
+                                              
+                                                    <tr>
+                                                        <td>@md.InvoiceNumber</td>
+                                                        <td>@md.InvoiceTotal</td>
+                                                        <td>@md.InvoiceDate</td>
+                                                        <td>@Enum.GetName(typeof(Client), @md.ClientId)</td>
+                                                        @*<td>@md.Status</td>*@
+                                                        <td>@md.InvoiceNumber</td>
+                                                        <td>
+                                                           
+                                                        
+                                                            <button class="btn btn-info" type="button" id="Summary"
+                                                                    onclick="location.href = 'https://admin.elitefulfillmentgroup.com/Invoice/NewInvoice?FileId=@md.InvoiceNumber'">
+                                                                Summary
+                                                            </button>
+                                                    </td>
+                                                </tr>
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <p>No Pending Invoices</p>
+                                        }
+                                    
+                                } -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End second full width column -->
+    <!-- Begin third full width column -->
+    <!-- @*<div id="rounded" style="margin-top:40px">
+        <div class="col-lg-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="h4">
+                        Current Pending Records Per Invoice
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table class="table blue-table">
+                                <thead style="background-color:#025da4; color:white">
+                                    <tr>
+                                        <th>Company</th>
+                                        <th>File</th>
+                                        <th>Count</th>
+                                        <th>Promotion</th>
+                                        <th>Type</th>
+                                        <th>Action</th>
+                                        @*<th></th>
+                                    </tr>
+                                </thead> -->
+                                <!-- <tbody>
+                                    @{
+                                        if (ViewBag.ActiveFileRecords != null)
+                                        {
+                                            List<Claim> lstActiveRecords = (List<Claim>)ViewBag.ActiveFileRecords;
+                                            //List<partners.elitefulfillmentgroup.com.Models.ActiveFileTable> lstActiveRecords = (List<partners.elitefulfillmentgroup.com.Models.ActiveFileTable>)ViewBag.ActiveFileRecords;
+                                            foreach (var md in lstActiveRecords)
+                                            {
+                                                <tr>
+                                                    <td>@md.Company</td>
+                                                    <td>@md.FileId</td>
+                                                    <td>@md.ClaimId</td>
+                                                    <td>@md.Card</td>
+                                                    <td>@md.GiftType</td>
+                                                    
+
+                                                    <td> -->
+                                                        <!-- @if (md.RedeemType.ToUpper() == "PRINT-MAIL")
+                                                        {
+                                                            <p>Print</p>
+
+
+                                                        }
+                                                        else if (md.RedeemType.ToUpper() == "EMAIL-MAIL")
+                                                        {
+                                                            <p>Email</p>
+
+
+                                                        } -->
+                                                    <!-- </td>
+                                                </tr>
+                                            }
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>*@ -->
+    <!-- End third full width column -->
+</div>

@@ -5,6 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { VivintSearchFormComponent } from './components/search-form-components/vivint-search-form/vivint-search-form.component';
 import { CheckLoggedInGuard } from './guards/check-logged-in.guard';
 import { CheckCompanyGuard } from './guards/check-company.guard';
+import { EfgPartnerswebFileprocessingComponent } from './efg-partnersweb-fileprocessing/efg-partnersweb-fileprocessing.component';
 
 const routes: Routes = [
   {
@@ -23,7 +24,7 @@ const routes: Routes = [
     loadChildren: () => import('./views/account-search/account-search.module')
     .then(m => m.AccountSearchModule) 
   },
-  {path: 'test', component: VivintSearchFormComponent}
+  {path: 'fileProcessing', component: EfgPartnerswebFileprocessingComponent}
 ];
 
 @NgModule({

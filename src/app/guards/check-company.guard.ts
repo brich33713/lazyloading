@@ -18,7 +18,9 @@ export class CheckCompanyGuard implements CanActivate {
     let company = this.service.getUserCompany("token")
     
     let accountSearch = ["dish","vivint-gift"]
+    let fileProcessing = ["efg-partnersweb"]
     if(accountSearch.includes(company)) this.router.navigate(["accountSearch"])
+    if(fileProcessing.includes(company)) this.router.navigate(["fileProcessing"])
 
 
     return true;
