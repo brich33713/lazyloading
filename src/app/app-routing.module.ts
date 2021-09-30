@@ -5,7 +5,8 @@ import { LoginComponent } from './components/login/login.component';
 import { VivintSearchFormComponent } from './components/search-form-components/vivint-search-form/vivint-search-form.component';
 import { CheckLoggedInGuard } from './guards/check-logged-in.guard';
 import { CheckCompanyGuard } from './guards/check-company.guard';
-import { EfgPartnerswebFileprocessingComponent } from './efg-partnersweb-fileprocessing/efg-partnersweb-fileprocessing.component';
+import { EfgPartnerswebFileprocessingComponent } from './components/fileprocessing-components/efg-partnersweb-fileprocessing/efg-partnersweb-fileprocessing.component';
+import { HomePageComponent } from './views/home-page/home-page.component';
 
 const routes: Routes = [
   {
@@ -24,7 +25,12 @@ const routes: Routes = [
     loadChildren: () => import('./views/account-search/account-search.module')
     .then(m => m.AccountSearchModule) 
   },
-  {path: 'fileProcessing', component: EfgPartnerswebFileprocessingComponent}
+  {
+    path: 'FileProcessing',
+    loadChildren: () => import('./views/fileprocessing/fileprocessing.module')
+    .then(m => m.FileprocessingModule) 
+  },
+  {path: 'Invoice/NewInvoice', component: HomePageComponent}
 ];
 
 @NgModule({

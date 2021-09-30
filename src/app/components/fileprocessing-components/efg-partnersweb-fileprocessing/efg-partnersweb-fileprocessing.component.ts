@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FunctionService } from '../layers/services/functions.service';
+import { Router } from '@angular/router';
+import { FunctionService } from '../../../layers/services/functions.service';
 
 @Component({
   selector: 'app-efg-partnersweb-fileprocessing',
@@ -9,11 +10,13 @@ import { FunctionService } from '../layers/services/functions.service';
 export class EfgPartnerswebFileprocessingComponent implements OnInit {
   programId;
   companyInvoices;
-  lstFileRecords = [];
-  
-  route = this.functions.route
+  lstFileRecords = [{InvoiceNumber: 2, InvoiceDate: 3, Status: "help"}];
 
-  constructor(private functions: FunctionService) { }
+  invoiceRoute(num){
+    this.router.navigate(['/Invoice/NewInvoice'],{queryParams: {FileId: num}})
+  }
+
+  constructor(private functions: FunctionService, private router: Router) { }
 
   ngOnInit(): void {
   }

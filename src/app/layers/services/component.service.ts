@@ -9,6 +9,7 @@ import { InfoBoxes } from '../repositories/InfoBox.repository';
 import { searchForms } from '../repositories/SearchComponent.repository';
 import { homePages } from '../repositories/HomePage.repository';
 import { Navbars } from '../repositories/NavBar.repository';
+import { FileProcessingLayouts } from '../repositories/FileProcessing.repository';
 
 
 @Injectable({
@@ -47,6 +48,14 @@ export class ComponentService {
 
         let returnedVal = InfoBoxes.find(box => box.role.includes(user.role) && box.client.includes(user.company))
         return returnedVal;
+    }
+
+    getFileProcessingLayout(){
+        let token = localStorage.getItem("token");
+        let user = this._service.getUserInfo(token);
+        let returnedLayout = FileProcessingLayouts.find(fp => fp.role.includes(user.role) && fp.client.includes(user.company))
+        returnedLayout = returnedLayout != undefined ? returnedLayout : FileProcessingLayouts.find(fp => fp.role.includes(user.role) && fp.client.length == 0)
+        return returnedLayout;
     }
 
 

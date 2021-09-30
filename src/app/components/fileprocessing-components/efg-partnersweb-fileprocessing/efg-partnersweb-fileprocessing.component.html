@@ -59,9 +59,6 @@
         </form>
     </div>
     <!-- End first full width column -->
-    <button class="btn btn-info" type="button" id="Summary" (click)="route('accountSearch')">
-        Summary
-    </button>
     <div class="col-lg-12" style="margin-top: 40px;">
         <div class="panel panel-info">
             <div class="panel-heading" style="height:60px;">
@@ -89,15 +86,15 @@
                             </thead>
                             <tbody>
                                 <tr *ngFor="let md of lstFileRecords">
-                                    <td>md.InvoiceNumber</td>
-                                    <td>md.InvoiceTotal</td>
-                                    <td>md.InvoiceDate</td>
+                                    <td>{{md.InvoiceNumber}}</td>
+                                    <td>{{md.InvoiceTotal}}</td>
+                                    <td>{{md.InvoiceDate}}</td>
                                     <!-- <td>Enum.GetName(typeof(Client), md.ClientId)</td> -->
                                     <td>Company Name Placeholder</td>
-                                    <td>md.Status</td>
-                                    <td>md.InvoiceNumber</td>
+                                    <td>{{md.Status}}</td>
+                                    <td>{{md.InvoiceNumber}}</td>
                                     <td>
-                                        <button class="btn btn-info" type="button" id="Summary" href="www.google.com">
+                                        <button class="btn btn-info" type="button" id="Summary" (click)=invoiceRoute(md.InvoiceNumber)>
                                             Summary
                                         </button>
                                     </td>

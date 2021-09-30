@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FunctionService } from '../layers/services/functions.service';
+import { FunctionService } from '../../../layers/services/functions.service';
 
 @Component({
   selector: 'app-efg-partnersweb-navbar',

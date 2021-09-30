@@ -20,7 +20,7 @@ export class CheckCompanyGuard implements CanActivate {
     let accountSearch = ["dish","vivint-gift"]
     let fileProcessing = ["efg-partnersweb"]
     if(accountSearch.includes(company)) this.router.navigate(["accountSearch"])
-    if(fileProcessing.includes(company)) this.router.navigate(["fileProcessing"])
+    if(fileProcessing.includes(company)) this.router.navigate(["FileProcessing"])
 
 
     return true;
