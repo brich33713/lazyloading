@@ -10,7 +10,7 @@ import { FunctionService } from '../../../layers/services/functions.service';
 export class EfgPartnerswebFileprocessingComponent implements OnInit {
   programId;
   companyInvoices;
-  lstFileRecords = [{InvoiceNumber: 2, InvoiceDate: 3, Status: "help"}];
+  lstFileRecords = [{InvoiceNumber: 2, InvoiceDate: 3, Status: "help", InvoiceTotal: '$30'}];
 
   invoiceRoute(num){
     this.router.navigate(['/Invoice/NewInvoice'],{queryParams: {FileId: num}})

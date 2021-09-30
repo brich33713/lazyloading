@@ -26,7 +26,7 @@ const routes: Routes = [
     .then(m => m.AccountSearchModule) 
   },
   {
-    path: 'FileProcessing',
+    path: 'fileProcessing',
     loadChildren: () => import('./views/fileprocessing/fileprocessing.module')
     .then(m => m.FileprocessingModule) 
   },
